@@ -8,11 +8,15 @@ html, body {
 section, article {
 	position: relative;
 }
-h1, h2, h3 {
-	font-family: 'Berkshire Swash', cursive;
+h1, h2, h3, strong {
+	/*font-family: 'Berkshire Swash', cursive;*/
+	font-family: 'Fredericka the Great', cursive;
 }
 h4, h5 {
 	font-weight: 300;
+}
+strong {
+	font-size: 1.1rem;
 }
 header {
 	text-align: center;
