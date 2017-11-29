@@ -40,6 +40,15 @@ header .container {
 	/*background: no-repeat center url(../imgs/hallway_05.jpg);*/
 	background-size: cover;
 }
+#section_1 {
+	height: 30vh;
+}
+#section_1 article {
+	position: absolute;
+	top: 30%;
+	height: 100px;
+	margin-top: -50px;
+}
 
 .scroll_down {
 	display: block;
@@ -67,6 +76,10 @@ header .container {
 }
 .navbar-light .navbar-nav a.nav-link:hover {
 	color: #FA002C;
+}
+/*PROFILE*/
+table.profile tr td{
+	width: 50%;
 }
 /*First chart*/
 .chart {
@@ -178,7 +191,22 @@ header .container {
 	.navbar-light .navbar-toggler {
 		border: none;
 	}
-
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%;
+	}
+	table.profile tr td {
+		width: 100%;
+	}
 	/*CHARTS*/
 	.chart li {
 		height: auto;
