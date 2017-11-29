@@ -1,0 +1,186 @@
+body {
+	font-size: 14px;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+}
+section, article {
+	position: relative;
+}
+h1, h2, h3 {
+	font-family: 'Berkshire Swash', cursive;
+}
+h4, h5 {
+	font-weight: 300;
+}
+header {
+	text-align: center;
+	min-height: 100%;
+	position: relative;
+	/*background: no-repeat center url(../imgs/welcome_05.jpg);*/
+	background-size: cover;
+}
+header .container {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	transform: translateY(-50%);
+	padding: 0;
+}
+.wrapper {
+	position: relative;
+}
+#intro {
+	/*background: no-repeat center url(../imgs/hallway_05.jpg);*/
+	background-size: cover;
+}
+
+.scroll_down {
+	display: block;
+	margin: 0 auto;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-image: url(../imgs/scroll_down_black.gif);
+	background-size: 46px;
+	background-position: center;
+	animation-name: scrolldown;
+	animation-duration: 2.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+/*SIDE NAVIGATION BAR*/
+.navbar-light .navbar-nav {
+	font-weight: 600;
+	font-size: 1rem;
+	color: #FA002C;
+}
+.navbar-light .navbar-nav a.nav-link {
+	font-weight: 300;
+	text-decoration: underline;
+}
+.navbar-light .navbar-nav a.nav-link:hover {
+	color: #FA002C;
+}
+/*First chart*/
+.chart {
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	background-image: repeating-linear-gradient(90deg,
+		#EEE,
+		#EEE 0.5%,
+		transparent 0.5%,
+		transparent 10%);
+	background-position: left top;
+}
+.chart li {
+	height: 25px;
+	margin: 1em 0;
+	position: relative;
+	display: block;
+}
+.chart li:before {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0 0.5rem 0 0;
+	display: block;
+	content: attr(title);
+	word-wrap: break-word;
+	z-index: 10;
+}
+.chart span {
+	position: relative;
+	float: left;
+	height: 25px;
+	display: inline-block;
+	background: #1DE9B6;
+	animation: draw 1s ease-in-out;
+}
+.chart span:before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 0 0 0 0.5rem;
+	display: block;
+	content: attr(title);
+	word-wrap: break-word;
+	font-weight: 600;
+}
+.conventions ul,
+.conventions li {
+	list-style: none;
+	text-align: center;
+}
+.conventions li:before {
+	position: static;
+	width: 20px;
+	height: 20px;
+	padding: 0 0.5rem 0 0;
+	display: inline-block;
+	content: " ";
+	word-wrap: break-word;
+	z-index: 10;
+	background: black;
+}
+.chart span.orange,
+.conventions li.orange:before {
+	background: #FF7320;
+}
+.chart span.yellow,
+.conventions li.yellow:before {
+	background: #FFAA20;
+}
+.chart span.blue,
+.conventions li.blue:before {
+	background: #2E80E9 ;
+}
+.conventions li.green:before {
+	background: #1DE9B6;
+}
+.chart span.grey,
+.conventions li.grey:before {
+	background: #EEE;
+}
+
+@keyframes draw {
+	0% {
+		width: 0;
+	}
+}
+@keyframes scrolldown {
+	0% {
+		background-position: 0 -36px;
+	}
+	100% {
+		background-position: 0 10px;
+	}
+}
+
+@media (max-width: 768px) {
+	
+	header .container {
+		position: static;
+		transform: unset;
+	}
+
+	/* SIDEBAR - NAVBAR*/
+	.navbar {
+		background-color: rgba(255, 255, 255, 0.95);
+	}
+	.navbar-light .navbar-toggler {
+		border: none;
+	}
+
+	/*CHARTS*/
+	.chart li {
+		height: auto;
+		margin: 1rem 0 3rem 0;
+	}
+	.chart li:before {
+		position: static;
+	}
+}
